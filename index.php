@@ -67,3 +67,52 @@ else {
     $soTien = (1*15000 + (5 - 1)*12000 + ($km - 5)*9000) * (1 - 0.12);
     echo $soTien;
 }
+
+$n = 100;
+$odd;
+$even;
+
+for ($i = 1; $i <= $n ; $i++){
+    if($i % 2 == 0)
+        {
+            $odd .= $i.',';
+        }
+    else 
+        $even .= $i.',';
+}
+$odd = trim($odd, ', ');
+$even = trim($even, ', ');
+echo "So chan la: $odd".'<hr>';
+echo "So chan la: $even".'<hr>';
+
+$snt = 5;
+$check = true;
+if($snt <= 1){
+    $check = false;
+}
+
+for($i = 2 ; $i <$snt; $i++){
+    if($snt % $i == 0)
+    {
+        $check = false;
+        break;
+    }
+}
+echo $check ? $snt.' la so nguyen to': $snt. ' khong phai la so nguyen to';
+
+echo '<hr>';
+
+$snt = 20;
+$check = true;
+$tong;
+if($snt <= 1){
+    $check = false;
+}
+for( $i = 2; $i < $n ; $i++){
+    if($snt % $i != 0)
+    {
+        $tong = $tong + $i;
+    }
+}
+
+echo 'tong cac so nguyen to tu 1 den '.' '.$snt.' la: '.$tong;
